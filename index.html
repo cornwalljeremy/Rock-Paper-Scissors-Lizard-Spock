@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock</title>
+</head>
+    <h1>Rock Paper Scissors Lizard Spock</h1>
+
+<body>
+    <script type = "text/javascript">
+        
+       /* for (let i = 0; i < 10; i++) {
+            let num = Math.floor(Math.random() * 10) + 1;
+            console.log(num);
+        }
+        */
+      // function adder(a,b,c) {                 
+         //  return (a + b + c);
+      // }
+     // console.log (adder(1,2,3));
+     // console.log (adder(5,7,9));
+
+      //function multiplier(a,b,c) {
+       //    return (a * b * c);
+      // }
+       //console.log (multiplier(5,7,9));
+
+//        function isString(a,b,c) {
+//            //console.log(typeof 'a.b.c')
+//             if (typeof a === 'string' &&
+//                 typeof b === 'string' &&
+//                 typeof c === 'string' 
+//             ){
+//                     return "Yes We Are Strings"
+//                 } else {
+//                     return "NOPE"
+//                 }
+//                 }
+//                 var stringCheck = isString("hello","goodbye","false")
+       
+// function vowelChecker(x) {
+//     var firstChar = x.charAt(0)
+
+//     firstChar = firstChar.toLowerCase()
+
+//     var vowels = ["a", "e","i","o","u"]
+
+//     var isVowel = vowels.includes(firstChar)
+
+//     return isVowel
+// }
+// var vowelCheck = vowelChecker('Autumn')
+
+// console.log(vowelCheck)
+var computerChoices = ['rk', 'pr', 'sc', 'sp', 'li'];
+var playerName = window.prompt("Your Name");
+
+var wins = 0;
+var losses = 0;
+var ties = 0;
+
+for (var i = 0; i < 3; i++) {
+var computerGuess =
+    computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+var userGuess = prompt('Enter rk, pr, sc, sp, or li to play!');
+    userGuess = userGuess.toLowerCase();
+
+if (userGuess === 'rk' || userGuess === 'pr' || userGuess === 'sc' || userGuess === 'sp' || userGuess === 'li' ) {
+    alert('The Computer Chose ' + computerGuess);
+
+if (
+    (userGuess === 'rk' && computerGuess === 'sc') ||
+    (userGuess === 'sc' && computerGuess === 'pr') ||
+    (userGuess === 'pr' && computerGuess === 'sp') ||
+    (userGuess === 'sp' && computerGuess === 'sc') ||
+    (userGuess === 'sc' && computerGuess === 'li') ||
+    (userGuess === 'li' && computerGuess === 'pr') ||
+    (userGuess === 'rk' && computerGuess === 'li')
+){
+    wins++;
+    alert(playerName + ' Won ' + wins + ' time(s)!');
+}   else if (userGuess === computerGuess) {
+    ties++;
+    alert('Tie '  + ties + ' time(s)!');
+}   else {
+    losses++;
+    alert('Loser ' + losses + ' time(s)!');
+}   
+} else {
+    alert("Please Choose 'rk', 'pr', 'sc', 'sp', 'li'!");
+}
+    
+alert(
+     'Total Wins: ' +
+    wins +
+     '\nTotal Ties: ' +
+    ties +
+    '\nTotal Losses: ' +
+    losses
+);
+}
+
+
+
+// function compChoice() {
+//     var compChoice = ["r", "p", "s"]
+//     window.alert("Enter R P or S");
+//     var prompt
+// }
+
+
+
+
+    </script>
+    
+</body>
+</html>
